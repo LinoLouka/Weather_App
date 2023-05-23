@@ -1,12 +1,13 @@
 body {
   text-align: center;
   background-color: lightblue;
+  text-transform: cap;
 }
 body main {
   padding: 20px;
 }
 body #weatherData {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 body img {
   width: 30%;
