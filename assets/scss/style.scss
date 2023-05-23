@@ -1,0 +1,19 @@
+body {
+  text-align: center;
+  background-color: lightblue;
+  main {
+    padding: 20px;
+  }
+
+  #weatherData {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 5px gray;
+  }
+}

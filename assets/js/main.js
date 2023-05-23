@@ -22,8 +22,6 @@ function display(lat, lon) {
   let url = fetch(
     `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
   );
-  //   console.log(lat);
-  //   console.log(lon);
   url
     .then((response) => response.json())
     .then((data) => {

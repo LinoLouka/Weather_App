@@ -22,26 +22,26 @@ export function displayCard(data) {
 
   let max = data.list[0].main.temp_max;
   let maxP = document.createElement("p");
-  maxP.textContent = max;
+  maxP.textContent = "Temperature max: " + max;
   weatherData.appendChild(maxP);
 
   let min = data.list[0].main.temp_min;
   let minP = document.createElement("p");
-  minP.textContent = min;
+  minP.textContent = "Temperature min: " + min;
   weatherData.appendChild(minP);
 
   let pressure = data.list[0].main.pressure;
   let pressureP = document.createElement("p");
-  pressureP.textContent = pressure;
+  pressureP.textContent = "pressure: " + pressure;
   weatherData.appendChild(pressureP);
 
   let humidity = data.list[0].main.humidity;
   let humidityP = document.createElement("p");
-  humidityP.textContent = humidity;
+  humidityP.textContent = "humidity: " + humidity;
   weatherData.appendChild(humidityP);
 
   let speedWind = data.list[0].wind.speed;
   let speedWindP = document.createElement("p");
-  speedWindP.textContent = speedWind;
+  speedWindP.textContent = "speed wind: " + speedWind;
   weatherData.appendChild(speedWindP);
 }
