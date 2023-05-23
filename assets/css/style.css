@@ -1,15 +1,25 @@
 body {
   text-align: center;
-  background-color: lightblue;
-  text-transform: cap;
+  text-transform: capitalize;
+  background-color: rgb(127, 159, 170);
 }
 body main {
   padding: 20px;
 }
-body #weatherData {
+body main #weatherData {
+  display: grid;
   margin-top: 25px;
 }
-body img {
+body main #weatherData .weather-card {
+  display: flex;
+  flex-direction: column;
+  background-color: lightblue;
+  margin: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+body main #weatherData .weather-card img {
+  margin: auto;
   width: 30%;
   height: 30%;
   border-radius: 50%;

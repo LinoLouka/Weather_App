@@ -1,6 +1,5 @@
 export function displayCard(data) {
   let weatherDataContainer = document.getElementById("weatherData");
-  let weatherCardsWrapper = document.createElement("div");
 
   for (let i = 0; i < data.list.length; i++) {
     let weatherCardDiv = document.createElement("div");
@@ -29,31 +28,29 @@ export function displayCard(data) {
 
     let max = data.list[i].main.temp_max;
     let maxP = document.createElement("p");
-    maxP.textContent = "Temperature max: " + max;
+    maxP.textContent = "Temperature max: " + max + "°C";
     weatherCardDiv.appendChild(maxP);
 
     let min = data.list[i].main.temp_min;
     let minP = document.createElement("p");
-    minP.textContent = "Temperature min: " + min;
+    minP.textContent = "Temperature min: " + min + "°C";
     weatherCardDiv.appendChild(minP);
 
     let pressure = data.list[i].main.pressure;
     let pressureP = document.createElement("p");
-    pressureP.textContent = "Pressure: " + pressure;
+    pressureP.textContent = "Pressure: " + pressure + "Pa";
     weatherCardDiv.appendChild(pressureP);
 
     let humidity = data.list[i].main.humidity;
     let humidityP = document.createElement("p");
-    humidityP.textContent = "Humidity: " + humidity;
+    humidityP.textContent = "Humidity: " + humidity + "%";
     weatherCardDiv.appendChild(humidityP);
 
     let speedWind = data.list[i].wind.speed;
     let speedWindP = document.createElement("p");
-    speedWindP.textContent = "Wind speed: " + speedWind;
+    speedWindP.textContent = "Wind speed: " + speedWind + "km/h";
     weatherCardDiv.appendChild(speedWindP);
 
-    weatherCardsWrapper.appendChild(weatherCardDiv);
+    weatherDataContainer.appendChild(weatherCardDiv);
   }
-
-  weatherDataContainer.appendChild(weatherCardsWrapper);
 }

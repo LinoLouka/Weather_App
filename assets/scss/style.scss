@@ -1,20 +1,29 @@
 body {
   text-align: center;
-  background-color: lightblue;
-  text-transform: cap;
+  text-transform: capitalize;
+  background-color: rgb(127, 159, 170);
   main {
     padding: 20px;
-  }
 
-  #weatherData {
-    margin-top: 25px;
-  }
-
-  img {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    border: 1px solid gray;
-    box-shadow: 2px 2px 5px gray;
+    #weatherData {
+      display: grid;
+      margin-top: 25px;
+      .weather-card {
+        display: flex;
+        flex-direction: column;
+        background-color: lightblue;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        img {
+          margin: auto;
+          width: 30%;
+          height: 30%;
+          border-radius: 50%;
+          border: 1px solid gray;
+          box-shadow: 2px 2px 5px gray;
+        }
+      }
+    }
   }
 }
