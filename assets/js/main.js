@@ -1,5 +1,7 @@
+import { displayCard } from "./cards.js";
+
 let send = document.getElementById("send");
-let weatherData = document.getElementsByClassName("weatherData");
+let weatherData = document.getElementById("weatherData");
 const apiKey = "00dde611c283263cbabba55f2e6247f0";
 
 async function weather() {
@@ -26,13 +28,6 @@ function display(lat, lon) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      //   console.log(data.list[0].main.temp_max);
-      //   console.log(data.list[0].main.temp_min);
-      //   console.log(data.list[0].main.presure);
-      //   console.log(data.list[0].main.humidity);
-      //   console.log(data.list[0].wind.speed);
-      //   console.log(data.list[0].weather.main);
-      //   console.log(data.list[0].weather.description);
-      //   console.log(data.list[0].weather.icon);
+      displayCard(data);
     });
 }
