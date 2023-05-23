@@ -1,8 +1,13 @@
 export function displayCard(data) {
+  let date = data.list[0].dt_txt;
+  let dateP = document.createElement("p");
+  dateP.textContent = date;
+  weatherData.appendChild(dateP);
+
   let weatherCode = data.list[0].weather[0].icon;
   let weatherIcoIMG = document.createElement("img");
   let weatherIco = `https://openweathermap.org/img/wn/${weatherCode}@2x.png`;
-  weatherIcoIMG.src = weatherIco; // Utilisez 'src' pour définir l'URL de l'image
+  weatherIcoIMG.src = weatherIco;
   weatherData.appendChild(weatherIcoIMG);
 
   let weather = data.list[0].weather[0].main;
